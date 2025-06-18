@@ -15,5 +15,14 @@ void main() {
       expect(result, DayOfTheWeek.saturday);
       expect(isHolyday, isTrue, reason: 'Не Вихідний день 🎉');
     });
+
+    test('Should returns day and isHolyday false', () {
+      // act
+      final (DayOfTheWeek result, bool isHolyday) = task7(5);
+
+      // assert
+      expect(result, DayOfTheWeek.friday);
+      expect(isHolyday, isFalse, reason: 'Не Вихідний день 🎉');
+    });
   });
 }
