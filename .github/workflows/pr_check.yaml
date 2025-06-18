@@ -1,0 +1,24 @@
+name: PR check
+
+on:
+  pull_request:
+
+jobs:
+  test:
+    name: Run Dart Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Dart SDK
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk-id: stable
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Run Dart tests
+        run: dart test
