@@ -19,3 +19,20 @@
 
   return (enumerate, evenOnlyEnumerate, sum);
 }
+
+(List<int> enumerate, List<int> evenOnlyEnumerate, int sum) task8_alt(int count) {
+  final List<int> enumerate = [];
+  final List<int> evenOnlyEnumerate = [];
+  int sum = 0;
+
+  for(var i = 1; i <= count; i++) {
+    enumerate.add(i);
+    if (i % 2 == 0) {
+      evenOnlyEnumerate.add(i);
+    }
+
+    sum += i;
+  }
+
+  return (enumerate, evenOnlyEnumerate, sum);
+}
