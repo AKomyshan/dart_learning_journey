@@ -32,6 +32,7 @@
     }
 
     sum += i;
+    ;
   }
 
   return (enumerate, evenOnlyEnumerate, sum);
