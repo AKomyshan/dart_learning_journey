@@ -19,7 +19,7 @@ jobs:
         run: dart pub get
 
       - name: Dart analyze
-        run: dart analyze
+        run: dart analyze --fatal-warnings
 
       - name: Run Dart tests
         run: dart test
