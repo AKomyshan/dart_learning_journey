@@ -23,7 +23,7 @@ void main() {
 
       // act
       final (List<int> enumerate, List<int> evenOnlyEnumerate, int sum) =
-      task8_alt(count);
+      task8Alt(count);
 
       // assert
       expect(enumerate, equals([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));

@@ -5,8 +5,6 @@
 /// Якщо менше або дорівнює 25 — “Прохолодно”.
 /// 3) Потім створіть ще один тернарний оператор:
 /// Якщо менше 10 — вивести “Дуже холодно”.
-///
-
 TemperatureState task4(int temperature) => temperature > 25
     ? TemperatureState.warm
     : temperature < 10

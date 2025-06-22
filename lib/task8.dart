@@ -20,7 +20,7 @@
   return (enumerate, evenOnlyEnumerate, sum);
 }
 
-(List<int> enumerate, List<int> evenOnlyEnumerate, int sum) task8_alt(int count) {
+(List<int> enumerate, List<int> evenOnlyEnumerate, int sum) task8Alt(int count) {
   final List<int> enumerate = [];
   final List<int> evenOnlyEnumerate = [];
   int sum = 0;
