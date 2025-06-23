@@ -1,5 +1,5 @@
 import 'package:test/test.dart';
-import 'package:dart_learning_journey/task3.dart';
+import 'package:dart_learning_journey/lesson6/task3.dart';
 
 void main() {
   group('Task 3', () {

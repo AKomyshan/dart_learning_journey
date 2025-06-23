@@ -1,4 +1,4 @@
-import 'package:dart_learning_journey/task1.dart';
+import 'package:dart_learning_journey/lesson6/task1.dart';
 
 void main() {
   final double width = 18.4;
