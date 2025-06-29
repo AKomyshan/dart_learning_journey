@@ -6,7 +6,7 @@ void main() {
 
   final (double area, double perimeter, int fullSquares1x1) = task1(width, height);
 
-  print("Area: ${area.toStringAsFixed(1)}");
-  print("Perimeter: ${perimeter.toStringAsFixed(1)}");
-  print("Full Squares 1x1: $fullSquares1x1");
+  print('Area: ${area.toStringAsFixed(1)}');
+  print('Perimeter: ${perimeter.toStringAsFixed(1)}');
+  print('Full Squares 1x1: $fullSquares1x1');
 }

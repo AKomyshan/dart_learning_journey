@@ -6,7 +6,7 @@
 void main() {
   int cursor = 10;
   while (cursor > 0) {
-    print("$cursor - ${cursor % 2 == 0 ? "парне" : "не парне"}");
+    print("$cursor - ${cursor % 2 == 0 ? 'парне' : 'не парне'}");
     cursor--;
   }
 }
