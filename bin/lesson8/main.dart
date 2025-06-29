@@ -6,6 +6,7 @@ import 'package:talker/talker.dart';
 void main() {
   final Talker talker = Talker(
       settings: TalkerSettings(
+          maxHistoryItems: 2000,
           colors: {TalkerLogType.verbose.key: AnsiPen()..magenta(), TalkerLogType.debug.key: AnsiPen()..cyan()}));
 
   final AspectOriented lesson8 = AspectOriented(talker);
