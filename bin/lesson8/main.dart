@@ -4,7 +4,11 @@ import 'package:dart_learning_journey/lesson8/index.dart';
 import 'package:talker/talker.dart';
 
 void main() {
-  final Talker talker = Talker(settings: TalkerSettings(colors: {TalkerLogType.verbose.key: AnsiPen()..magenta()}));
+  final Talker talker = Talker(
+      settings: TalkerSettings(colors: {
+    TalkerLogType.verbose.key: AnsiPen()..magenta(),
+    TalkerLogType.debug.key: AnsiPen()..cyan()
+  }));
   final AspectOriented lesson8aop = AspectOriented(talker);
 
   lesson8aop.run(libraryAnchor: reflectionAnchor);
