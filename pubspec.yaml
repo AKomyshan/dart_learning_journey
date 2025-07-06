@@ -8,3 +8,7 @@ environment:
 dev_dependencies:
   lints: ^5.1.1
   test: ^1.26.2
+dependencies:
+  talker: ^4.9.1
+  meta: ^1.17.0
+  faker: ^2.2.0

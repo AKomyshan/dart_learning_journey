@@ -13,7 +13,7 @@
     case 5: return (DayOfTheWeek.friday, false);
     case 6: return (DayOfTheWeek.saturday, true);
     case 7: return (DayOfTheWeek.sunday, true);
-    default: throw ArgumentError("Невірний номер дня");
+    default: throw ArgumentError('Невірний номер дня');
   }
 }
 

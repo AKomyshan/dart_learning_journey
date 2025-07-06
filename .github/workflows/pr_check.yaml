@@ -23,3 +23,6 @@ jobs:
 
       - name: Run Dart tests
         run: dart test
+
+      - name: Show lesson 8 on CI :)
+        run: dart ./bin/lesson8/main.dart

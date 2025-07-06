@@ -3,3 +3,12 @@ include: package:lints/recommended.yaml
 analyzer:
   errors:
     empty_statements: error
+
+linter:
+  rules:
+    directives_ordering: true
+    prefer_single_quotes: true
+    omit_local_variable_types: true
+
+formatter:
+  page_width: 120
