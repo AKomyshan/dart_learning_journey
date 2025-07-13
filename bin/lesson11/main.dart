@@ -3,27 +3,21 @@ import 'package:dart_learning_journey/shared/logging.dart';
 
 void main() async {
   final talker = getLogger();
-  talker.verbose('Start checkpoint');
+  talker.verbose('Start checkpoint 1');
 
-  talker.verbose('Мене звати ${await fetchName()}');
+  await withProfiler(talker, () async {
+    talker.verbose('Мене звати ${await fetchName()}');
+    talker.verbose(formatAgeString(await fetchAge()));
+  });
 
-  talker.verbose(formatAgeString(await fetchAge()));
-}
+  talker.verbose('Start checkpoint 2');
 
-String formatAgeString(String ageStr) {
-  try {
-    int age = int.parse(ageStr);
-    String yearWord;
+  await withProfiler(talker, () async {
+    final results = await Future.wait([fetchName(), fetchAge()]);
+    talker.verbose('Мене звати ${results[0]}');
+    talker.verbose(formatAgeString(results[1]));
+  });
 
-    if (age % 10 == 1 && age % 100 != 11) {
-      yearWord = "рік";
-    } else if ([2, 3, 4].contains(age % 10) && ![12, 13, 14].contains(age % 100)) {
-      yearWord = "роки";
-    } else {
-      yearWord = "років";
-    }
-    return "Мені $age $yearWord";
-  } catch (e) {
-    return "Некоректний вік: $ageStr";
-  }
+  final start = await delayedCountdown(5, talker);
+  talker.verbose(start);
 }
