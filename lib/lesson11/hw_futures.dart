@@ -8,7 +8,7 @@ Future<String> fetchAge() => Future.delayed(Duration(milliseconds: Constants.tas
 Future<String> delayedCountdown(int seconds, Talker logger) async {
   int acc = seconds;
   do {
-    logger.verbose(acc);
+    logger.verbose('$acc...');
     await Future.delayed(Duration(seconds: 1));
   } while (--acc > 0);
 

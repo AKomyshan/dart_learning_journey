@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:math';
 
 import 'package:dart_learning_journey/lesson11/constants.dart';
@@ -32,4 +33,16 @@ void main() async {
     talker.verbose('[loop] $value');
   }
   task6Stream.listen((data) => talker.verbose('[listen] $data'));
+
+  final task7Stream = Stream.periodic(const Duration(seconds: 1), (_) => Random().nextInt(Constants.pow2_32)).take(10);
+  await task7Stream.forEach((x) => talker.verbose('$x...'));
+
+  final streamController = StreamController<String>()
+    ..add('Hello ')
+    ..add('World ')
+    ..add('Dart');
+
+  streamController.stream.listen((x) => talker.verbose('[StreamController] $x'), onDone: () => talker.verbose('Стрім завершено'));
+
+  await streamController.close();
 }
