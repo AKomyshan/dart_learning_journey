@@ -12,3 +12,4 @@ dependencies:
   talker: ^4.9.1
   meta: ^1.17.0
   faker: ^2.2.0
+  fake_async: ^1.3.3
