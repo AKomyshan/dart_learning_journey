@@ -16,8 +16,7 @@ Future<String> delayedCountdown(int seconds, Talker logger) async {
 }
 
 Future<void> withProfiler(Talker logger, Future<void> Function() action) async {
-  final stopwatch = Stopwatch();
-  stopwatch.start();
+  final stopwatch = Stopwatch()..start();
 
   await action();
 
@@ -33,7 +32,7 @@ String formatAgeString(String ageStr) {
 
     if (age % 10 == 1 && age % 100 != 11) {
       yearWord = 'рік';
-    } else if ([2, 3, 4].contains(age % 10) && ![12, 13, 14].contains(age % 100)) {
+    } else if ([2, 3, 4].contains(age % 10) && [12, 13, 14].contains(age % 100)) {
       yearWord = 'роки';
     } else {
       yearWord = 'років';
