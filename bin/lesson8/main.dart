@@ -1,13 +1,9 @@
 import 'package:dart_learning_journey/lesson8/aop/aspect_oriented.dart';
 import 'package:dart_learning_journey/lesson8/index.dart';
-
-import 'package:talker/talker.dart';
+import 'package:dart_learning_journey/shared/logging.dart';
 
 void main() {
-  final talker = Talker(
-      settings: TalkerSettings(
-          maxHistoryItems: 2000,
-          colors: {TalkerLogType.verbose.key: AnsiPen()..magenta(), TalkerLogType.debug.key: AnsiPen()..cyan()}));
+  final talker = getLogger();
 
   final lesson8 = AspectOriented(talker);
 
